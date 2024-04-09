@@ -1,0 +1,38 @@
+body {
+  background-color: lightblue;
+}
+
+.film-grid-container {
+  max-width: 800px;
+  /* margin: 0 auto; */
+  margin-left: 40px;
+  
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 20px;
+}
+
+.film-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 36px; /* Increase font size */
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
