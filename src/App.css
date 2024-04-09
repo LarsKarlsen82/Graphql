@@ -1,8 +1,9 @@
 body {
-  background-color: lightblue;
+  background-image: url('/public/StarWars.jpg'); /* Set StarWars.jpg as the background image */
   background-size: cover; /* Ensures the background image covers the entire viewport */
   background-position: center; /* Centers the background image */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
+  background-attachment: fixed; /* Fixes the background image to the viewport */
 }
 
 .film-grid-container {
@@ -32,6 +33,12 @@ body {
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #f9f9f9;
+}
+
+.modal{
+  background-color: black;
+  padding: 20px;
+  margin-top: 10px;
 }
 
 .close {
