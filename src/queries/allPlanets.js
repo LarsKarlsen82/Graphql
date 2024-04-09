@@ -1,15 +1,16 @@
 import { gql } from "graphql-request";
 
 export const allPlanets = gql`
-  query Planets {
-    allPlanets {
-      planets {
-        name
-        id
-        gravity
-        terrains
-        population
-      }
+query Persons {
+  allPeople {
+    people {
+      name
+      gender
+      mass
+      height
+      birthYear
+  
     }
   }
+}
 `;
