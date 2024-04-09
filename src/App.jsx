@@ -1,10 +1,25 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"; // Import Link along with BrowserRouter and Routes
-import AllPersons from './AllPersons'; // Import the AllPersons component
-import Films from './Films'; // Import the Films component
+import React, { useState, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import AllPersons from './AllPersons';
+import Films from './Films';
+import ImperialMarch from '../public/StarWars.mp4'; // Import the audio file
 
 function NavBar() {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null); // Create a ref to hold the audio element
+
+  const toggleAudio = () => {
+    const audio = audioRef.current; // Get the audio element from the ref
+    if (!audio) return;
+
+    if (isPlaying) {
+      audio.pause(); // Pause if currently playing
+    } else {
+      audio.play(); // Play if currently paused
+    }
+    setIsPlaying(!isPlaying); // Toggle the state
+  };
+
   return (
     <nav>
       <ul>
@@ -14,7 +29,13 @@ function NavBar() {
         <li>
           <Link to="/persons">Persons</Link>
         </li>
+        <li className={!isPlaying ? 'play-button-li' : ''}>
+          <button className="play-button" onClick={toggleAudio}>
+            {isPlaying ? 'Stop Imperial March' : 'Play Imperial March'}
+          </button>
+        </li>
       </ul>
+      <audio ref={audioRef} src={ImperialMarch} /> {/* Audio element */}
     </nav>
   );
 }

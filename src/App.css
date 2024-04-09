@@ -32,7 +32,7 @@ body {
 .film-card {
   border: 1px solid #ccc;
   padding: 10px;
-  background-color: #f9f9f9;
+  background-color: #251a1a;
 }
 
 .modal{
@@ -58,6 +58,19 @@ body {
 p {
   color:white;
 }
-h2, h1 {
+h2, h1, h5 {
   color: white;
+}
+
+.play-button {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 10%;
+  color: whitesmoke;
+  background-color: darkblue;
+}
+
+.play-button-li {
+  list-style-type: none;
 }
