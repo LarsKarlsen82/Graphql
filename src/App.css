@@ -1,6 +1,19 @@
 body {
   background-color: lightblue;
+  background-size: cover; /* Ensures the background image covers the entire viewport */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Prevents the background image from repeating */
 }
+
+.film-grid-container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto; /* Center the container horizontally */
+  padding: 20px; /* Add padding for better spacing */
+}
+
+/* Remaining CSS remains the same */
+
 
 .film-grid-container {
   max-width: 800px;
@@ -35,4 +48,9 @@ body {
   cursor: pointer;
 }
 
-
+p {
+  color:white;
+}
+h2, h1 {
+  color: white;
+}
