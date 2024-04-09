@@ -69,8 +69,23 @@ h2, h1, h5 {
   width: 10%;
   color: whitesmoke;
   background-color: darkblue;
+  padding: 20px;
 }
 
 .play-button-li {
   list-style-type: none;
+}
+
+
+.person-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 20px;
+}
+
+.person-card {
+  background-color: darkblue;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
